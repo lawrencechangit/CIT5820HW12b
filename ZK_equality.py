@@ -1,11 +1,10 @@
 from zksk import Secret, DLRep
 from zksk import utils
-import random
 
 def ZK_equality(G, H):
     # Generate two El-Gamal ciphertexts (C1,C2) and (D1,D2)
-    r1 = Secret(utils.get_random_num(bits=128)).value
-    r2 = Secret(utils.get_random_num(bits=128)).value
+    r1 = 1
+    r2 = 2
     m=1
 
     C1 = r1*G
