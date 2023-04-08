@@ -11,7 +11,6 @@ def ZK_equality(G, H):
     C1 = r1*G
     C2 = r1*H+m*G
 
-    r2 = Secret(utils.get_random_num(bits=128))
     D1 = r2 * G
     D2 = r2 * H + m * G
 
