@@ -8,10 +8,10 @@ def ZK_equality(G, H):
     m  = Secret(utils.get_random_num(bits=128))
 
     C1 = r1.value * G
-    C2 = r1.value * H + m * G
+    C2 = r1.value * H + m.value * G
 
     D1 = r2.value * G
-    D2 = r2.value * H + m * G
+    D2 = r2.value * H + m.value * G
 
     # Generate a NIZK proving equality of the plaintexts
     stmt = DLRep(C1, r1 * G) & DLRep(C2, r1 * H + m * G) & DLRep(D1, r2 * G) & DLRep(D2, r2 * H + m * G)
